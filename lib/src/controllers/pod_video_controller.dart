@@ -25,7 +25,9 @@ class _PodVideoController extends _PodUiController {
   ///*seek video
   /// Seek video to a duration.
   Future<void> seekTo(Duration moment) async {
+    podVideoStateChanger(PodVideoState.paused);
     await _videoCtr!.seekTo(moment);
+    podVideoStateChanger(PodVideoState.playing);
   }
 
   /// Seek video forward by the duration.
