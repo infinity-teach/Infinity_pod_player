@@ -5,7 +5,7 @@ class MaterialIconButton extends StatelessWidget {
     Key? key,
     this.color,
     required this.child,
-    this.radius = 12,
+    this.radius = 16,
     required this.toolTipMesg,
     this.onPressed,
     this.onHover,
@@ -26,7 +26,6 @@ class MaterialIconButton extends StatelessWidget {
       shape: const CircleBorder(),
       child: Tooltip(
         message: toolTipMesg,
-        // textStyle: TextStyle(fontSize: 0.01),
         child: InkWell(
           borderRadius: BorderRadius.circular(radius * 4),
           onHover: onHover,

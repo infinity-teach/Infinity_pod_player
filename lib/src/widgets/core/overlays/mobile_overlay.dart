@@ -83,7 +83,7 @@ class _MobileOverlay extends StatelessWidget {
                   }
                 },
                 child: const Icon(
-                  Icons.more_vert_rounded,
+                  Icons.more_horiz_rounded,
                 ),
               ),
             ],
@@ -118,7 +118,9 @@ class _MobileOverlay extends StatelessWidget {
   void _bottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
-      builder: (context) => SafeArea(child: _MobileBottomSheet(tag: tag)),
+      builder: (context) => SafeArea(
+        child: _MobileBottomSheet(tag: tag),
+      ),
     );
   }
 }
@@ -126,6 +128,7 @@ class _MobileOverlay extends StatelessWidget {
 class _LeftRightDoubleTapBox extends StatelessWidget {
   final String tag;
   final bool isLeft;
+
   const _LeftRightDoubleTapBox({
     Key? key,
     required this.tag,
